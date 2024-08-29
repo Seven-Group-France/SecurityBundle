@@ -1,0 +1,28 @@
+{
+  "name": "seven-group/security-bundle",
+  "version": "0.0.1",
+  "description": "Security bundle for all services of the project",
+  "type": "library",
+  "keywords": [],
+  "license": "MIT",
+  "require": {
+      "php": ">=8.1"
+  },
+  "authors": [
+      {
+          "name": "Seven Group",
+          "email": "dir-tech@seven-group.com",
+          "homepage": "https://seven-group.com/fr"
+      },
+      {
+          "name": "Mathieu JULLIEN",
+          "email": "hello@mathieujullien.fr",
+          "homepage": "https://mathieujullien.fr"
+      }
+  ],
+  "autoload": {
+      "psr-4": {
+          "Sevengroup\\SecurityBundle\\": "src/"
+      }
+  }
+}
