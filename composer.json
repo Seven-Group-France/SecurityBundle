@@ -2,6 +2,7 @@
   "name": "seven-group-test/security-bundle",
   "description": "Security bundle for all services of the project",
   "type": "library",
+  "version": "1.0.0",
   "keywords": [],
   "license": "MIT",
   "require": {
