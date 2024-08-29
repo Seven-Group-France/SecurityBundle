@@ -1,6 +1,5 @@
 {
   "name": "seven-group/security-bundle",
-  "version": "0.0.1",
   "description": "Security bundle for all services of the project",
   "type": "library",
   "keywords": [],
