@@ -1,5 +1,5 @@
 {
-  "name": "seven-group/security-bundle",
+  "name": "seven-group-test/security-bundle",
   "description": "Security bundle for all services of the project",
   "type": "library",
   "keywords": [],
