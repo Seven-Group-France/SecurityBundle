@@ -24,5 +24,11 @@
       "psr-4": {
           "Sevengroup\\SecurityBundle\\": "src/"
       }
-  }
+  },
+  "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mathieu-jullien/SevengroupSecurityBundle/"
+        }
+    ]
 }
