@@ -14,7 +14,7 @@ class SevengroupSecurityExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
         
-        $container->setParameter('sevengroup.security.api_url', $config['security']['api_url']);
+        $container->setParameter('sevengroup_security.api_url', $config['api_url']);
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yaml');

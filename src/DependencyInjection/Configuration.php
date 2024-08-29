@@ -9,17 +9,14 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('sevengroup');
+        $treeBuilder = new TreeBuilder('sevengroup_security');
 
         $treeBuilder->getRootNode()
-            ->children()
-                ->arrayNode('security')
-                    ->children()
-                      ->scalarNode('api_url')
-                        ->isRequired()
-                        ->cannotBeEmpty()
-                      ->end()
-                    ->end()
+          ->children()
+            ->scalarNode('api_url')
+              ->isRequired()
+              ->cannotBeEmpty()
+            ->end()
         ;
 
         return $treeBuilder;
