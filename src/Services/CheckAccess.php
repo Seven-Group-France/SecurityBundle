@@ -18,7 +18,7 @@ class CheckAccess
       RequestStack $requestStack
     )
     {
-        $this->apiUrl = $parameterBag->get('sevengroup.security.api_url');
+        $this->apiUrl = $parameterBag->get('sevengroup_security.api_url');
         $this->httpClient = $httpClient;
         $this->requestStack = $requestStack;
     }
@@ -36,7 +36,7 @@ class CheckAccess
             ]
           ]
         );
-        
+
         if($response->getStatusCode() !== 200) {
             return false;
         }
