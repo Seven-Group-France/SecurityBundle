@@ -23,13 +23,18 @@ class CheckAccess
         $this->requestStack = $requestStack;
     }
 
-    public function checkAccess(string $resourceType, string $resourceId, string $access): bool
+    public function checkAccess(string $resourceType, string $access, string $resourceId = null): bool
     {
         $token = $this->getToken();
+        $url = $this->apiUrl . '/security/control/'.$access.'/'.$resourceType;
+
+        if(isset($resourceId)) {
+            $url .= '/'.$resourceId;
+        }
         // some logic here
         $response = $this->httpClient->request(
           'GET', 
-          $this->apiUrl . '/security/control/'.$access.'/'.$resourceType.'/'.$resourceId, 
+          $url, 
           [
             'headers' => [
                 'Authorization' => 'Bearer '.$token,
