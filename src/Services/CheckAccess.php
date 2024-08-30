@@ -23,7 +23,7 @@ class CheckAccess
         $this->requestStack = $requestStack;
     }
 
-    public function checkAccess(string $resourceType, string $access, string $resourceId = null): bool
+    public function checkAccess(string $resourceType, string $access, ?int $resourceId = null): bool
     {
         $token = $this->getToken();
         $url = $this->apiUrl . '/security/control/'.$access.'/'.$resourceType;
@@ -31,7 +31,6 @@ class CheckAccess
         if(isset($resourceId)) {
             $url .= '/'.$resourceId;
         }
-        // some logic here
         $response = $this->httpClient->request(
           'GET', 
           $url, 
@@ -47,6 +46,24 @@ class CheckAccess
         }
 
         return true;
+    }
+
+    public function getSecurity(string $resourceType): array
+    {
+        $token = $this->getToken();
+        $url = $this->apiUrl . '/security/control/list/'.$resourceType;
+
+        $response = $this->httpClient->request(
+          'GET', 
+          $url, 
+          [
+            'headers' => [
+                'Authorization' => 'Bearer '.$token,
+            ]
+          ]
+        );
+
+        return $response->toArray();
     }
 
     private function getToken(): string
