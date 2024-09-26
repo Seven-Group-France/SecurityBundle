@@ -13,12 +13,15 @@ class Installer
         $configDir = $rootDir . '/config/packages/';
         $configFile = $configDir . 'sevengroup_security.yaml';
 
+        $event->getIO()->write("Looking for configuration file {$configFile}");
+
         if (!file_exists($configFile)) {
+            $event->getIO()->write("Create configuration file {$configFile}");
             if (!is_dir($configDir)) {
                 mkdir($configDir, 0777, true);
             }
 
-            copy(__DIR__ . '/../Resources/config/packages/sevengroup_security.yaml', $configFile);
+            copy(__DIR__ . '/Resources/config/packages/sevengroup_security.yaml', $configFile);
             $event->getIO()->write("Configuration file sevengroup_security.yaml has been created in config/packages/");
         }
     }
