@@ -9,7 +9,6 @@
       "symfony/framework-bundle": "^6.4",
       "symfony/dependency-injection": "^6.4",
       "symfony/http-client": "^6.4"
-
   },
   "authors": [
       {
@@ -34,5 +33,10 @@
           "url": "https://github.com/mathieu-jullien/SevengroupSecurityBundle/"
       }
   ],
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "scripts": {
+      "post-install-cmd": [
+          "Sevengroup\\SecurityBundle\\Installer::copyConfigFile"
+      ]
+  }
 }
