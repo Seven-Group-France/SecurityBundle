@@ -18,7 +18,7 @@ class Installer
                 mkdir($configDir, 0777, true);
             }
 
-            copy(__DIR__ . '/../Resources/config/sevengroup_security.yaml', $configFile);
+            copy(__DIR__ . '/../Resources/config/packages/sevengroup_security.yaml', $configFile);
             $event->getIO()->write("Configuration file sevengroup_security.yaml has been created in config/packages/");
         }
     }
