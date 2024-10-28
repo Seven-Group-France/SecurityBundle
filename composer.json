@@ -1,5 +1,5 @@
 {
-  "name": "seven-group-test/security-bundle",
+  "name": "sevengroupfrance/security-bundle",
   "description": "Security bundle for all services of the project",
   "type": "library",
   "keywords": [],
@@ -30,13 +30,16 @@
   "repositories": [
       {
           "type": "vcs",
-          "url": "https://github.com/mathieu-jullien/SevengroupSecurityBundle/"
+          "url": "https://github.com/Seven-Group-France/SecurityBundle/"
       }
   ],
   "minimum-stability": "stable",
-  "scripts": {
-      "post-install-cmd": [
-          "Sevengroup\\SecurityBundle\\Installer::copyConfigFile"
-      ]
+  "extra": {
+      "symfony": {
+          "endpoint": [
+              "https://api.github.com/repos/Seven-Group-France/SecurityBundle/contents/index.json",
+              "flex://defaults"
+          ]
+      }
   }
 }

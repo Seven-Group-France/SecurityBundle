@@ -1,0 +1,24 @@
+{
+  "manifests": {
+      "sevengroupfrance/security-bundle": {
+          "manifest": {
+              "bundles": {
+                    "Sevengroup\\SecurityBundle\\SevengroupSecurityBundle": ["all"]
+                  },
+              "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+              },
+              "files": {
+                  "config/packages/sevengroup_security.yaml": {
+                      "contents": [
+                          "sevengroup_security:",
+                          "    api_url: 'https://security.local'"
+                      ],
+                      "executable": true
+                  }
+              },
+              "ref": "426980778e2b2d736a958ec43733d82836621a05"
+          }
+      }
+  }
+}
