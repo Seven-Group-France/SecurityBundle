@@ -1,4 +1,5 @@
 # SevengroupSecurityBundle
+[![Latest Stable Version](http://poser.pugx.org/sevengroupfrance/hubscore-bundle/v)](https://packagist.org/packages/sevengroupfrance/hubscore-bundle) [![Total Downloads](http://poser.pugx.org/sevengroupfrance/hubscore-bundle/downloads)](https://packagist.org/packages/sevengroupfrance/hubscore-bundle) [![Latest Unstable Version](http://poser.pugx.org/sevengroupfrance/hubscore-bundle/v/unstable)](https://packagist.org/packages/sevengroupfrance/hubscore-bundle) [![License](http://poser.pugx.org/sevengroupfrance/hubscore-bundle/license)](https://packagist.org/packages/sevengroupfrance/hubscore-bundle) [![PHP Version Require](http://poser.pugx.org/sevengroupfrance/hubscore-bundle/require/php)](https://packagist.org/packages/sevengroupfrance/hubscore-bundle)
 
 ## Installation
 
@@ -8,6 +9,8 @@ Copier le fichier config/packages/sevengroup_security.yaml dans le dossier confi
 ```shell
 composer require sevengroupfrance/security-bundle
 ```
+
+[Packagist](https://packagist.org/packages/sevengroupfrance/security-bundle)
 
 ## Utilisation
 
